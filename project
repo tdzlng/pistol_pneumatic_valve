@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-16"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.plcopen.org/xml/tc6_0201">
+  <fileHeader companyName="MITSUBISHI ELECTRIC CORPORATION" companyURL="http://www.mitsubishielectric.com" productName="GX Works3" productVersion="1.120A" creationDateTime="2026-10-05T05:48:24+07:00" />
+  <contentHeader name="b22" modificationDateTime="2026-06-25T03:20:25+07:00">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous>
+      <pou name="Timer" pouType="program">
+        <interface>
+          <addData>
+            <data name="http://www.mitsubishielectric.com/xml/interfaceVarsProperties" handleUnknown="implementation">
+              <interfaceVarsProperties modificationDateTime="2026-06-24T02:54:44+07:00" />
+            </data>
+          </addData>
+        </interface>
+        <body>
+          <LD />
+          <addData>
+            <data name="http://www.mitsubishielectric.com/xml/bodyProperties" handleUnknown="implementation">
+              <bodyProperties modificationDateTime="2026-06-25T03:20:25+07:00" />
+            </data>
+            <data name="http://www.mitsubishielectric.com/xml/bodyMLD" handleUnknown="implementation">
+              <bodyMLD>
+                <instruction step="0" content="LD M0" />
+                <instruction step="2" content="AND X5" />
+                <instruction step="4" content="AND M3" />
+                <instruction step="6" content="ANI X1" />
+                <instruction step="8" content="ANI M1" />
+                <instruction step="10" content="OUT T1 K300" />
+                <instruction step="15" content="END" />
+              </bodyMLD>
+            </data>
+          </addData>
+        </body>
+        <addData>
+          <data name="http://www.mitsubishielectric.com/xml/pouProperties" handleUnknown="implementation">
+            <pouProperties modificationDateTime="2026-06-25T03:20:25+07:00" />
+          </data>
+        </addData>
+      </pou>
+      <pou name="Auto" pouType="program">
+        <interface>
+          <addData>
+            <data name="http://www.mitsubishielectric.com/xml/interfaceVarsProperties" handleUnknown="implementation">
+              <interfaceVarsProperties modificationDateTime="2026-06-24T02:05:45+07:00" />
+            </data>
+          </addData>
+        </interface>
+        <body>
+          <LD />
+          <addData>
+            <data name="http://www.mitsubishielectric.com/xml/bodyProperties" handleUnknown="implementation">
+              <bodyProperties modificationDateTime="2026-06-25T02:55:58+07:00" />
+            </data>
+            <data name="http://www.mitsubishielectric.com/xml/bodyMLD" handleUnknown="implementation">
+              <bodyMLD>
+                <instruction step="0" content="LD X0" />
+                <instruction step="2" content="OR M0" />
+                <instruction step="4" content="ANI X1" />
+                <instruction step="6" content="OUT M0" />
+                <instruction step="8" content="LD M0" />
+                <instruction step="10" content="ANI X3" />
+                <instruction step="12" content="MPS" />
+                <instruction step="13" content="LD X2" />
+                <instruction step="15" content="LD T1" />
+                <instruction step="17" content="AND X5" />
+                <instruction step="19" content="ORB" />
+                <instruction step="20" content="OR M1" />
+                <instruction step="22" content="ANB" />
+                <instruction step="23" content="ANI X4" />
+                <instruction step="25" content="ANI M2" />
+                <instruction step="27" content="OUT M1" />
+                <instruction step="29" content="MRD" />
+                <instruction step="30" content="LDP X4" />
+                <instruction step="34" content="LD X2" />
+                <instruction step="36" content="AND X4" />
+                <instruction step="38" content="ORB" />
+                <instruction step="39" content="OR M2" />
+                <instruction step="41" content="ANB" />
+                <instruction step="42" content="ANDPI X5" />
+                <instruction step="46" content="ANI M1" />
+                <instruction step="48" content="OUT M2" />
+                <instruction step="50" content="MPP" />
+                <instruction step="51" content="LD X2" />
+                <instruction step="53" content="OR M3" />
+                <instruction step="55" content="ANB" />
+                <instruction step="56" content="OUT M3" />
+                <instruction step="58" content="END" />
+              </bodyMLD>
+            </data>
+          </addData>
+        </body>
+        <addData>
+          <data name="http://www.mitsubishielectric.com/xml/pouProperties" handleUnknown="implementation">
+            <pouProperties modificationDateTime="2026-06-25T02:55:58+07:00" />
+          </data>
+        </addData>
+      </pou>
+      <pou name="output" pouType="program">
+        <interface>
+          <addData>
+            <data name="http://www.mitsubishielectric.com/xml/interfaceVarsProperties" handleUnknown="implementation">
+              <interfaceVarsProperties modificationDateTime="2026-06-24T02:19:14+07:00" />
+            </data>
+          </addData>
+        </interface>
+        <body>
+          <LD />
+          <addData>
+            <data name="http://www.mitsubishielectric.com/xml/bodyProperties" handleUnknown="implementation">
+              <bodyProperties modificationDateTime="2026-06-24T02:53:41+07:00" />
+            </data>
+            <data name="http://www.mitsubishielectric.com/xml/bodyMLD" handleUnknown="implementation">
+              <bodyMLD>
+                <instruction step="0" content="LD M0" />
+                <instruction step="2" content="OUT Y0" />
+                <instruction step="4" content="LD M2" />
+                <instruction step="6" content="OUT Y2" />
+                <instruction step="8" content="LD M1" />
+                <instruction step="10" content="OUT Y3" />
+                <instruction step="12" content="END" />
+              </bodyMLD>
+            </data>
+          </addData>
+        </body>
+        <addData>
+          <data name="http://www.mitsubishielectric.com/xml/pouProperties" handleUnknown="implementation">
+            <pouProperties modificationDateTime="2026-06-24T02:53:41+07:00" />
+          </data>
+        </addData>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations>
+      <configuration name="">
+        <resource name="MAIN">
+          <pouInstance name="Timer" typeName="">
+            <addData>
+              <data name="http://www.mitsubishielectric.com/xml/pouInstancePosition" handleUnknown="implementation">
+                <pouInstancePosition order="0" />
+              </data>
+              <data name="http://www.mitsubishielectric.com/xml/pouInstanceExecuteOrder" handleUnknown="implementation">
+                <pouInstanceExecuteOrder order="3" />
+              </data>
+            </addData>
+          </pouInstance>
+          <pouInstance name="Auto" typeName="">
+            <addData>
+              <data name="http://www.mitsubishielectric.com/xml/pouInstancePosition" handleUnknown="implementation">
+                <pouInstancePosition order="1" />
+              </data>
+              <data name="http://www.mitsubishielectric.com/xml/pouInstanceExecuteOrder" handleUnknown="implementation">
+                <pouInstanceExecuteOrder order="1" />
+              </data>
+            </addData>
+          </pouInstance>
+          <pouInstance name="output" typeName="">
+            <addData>
+              <data name="http://www.mitsubishielectric.com/xml/pouInstancePosition" handleUnknown="implementation">
+                <pouInstancePosition order="2" />
+              </data>
+              <data name="http://www.mitsubishielectric.com/xml/pouInstanceExecuteOrder" handleUnknown="implementation">
+                <pouInstanceExecuteOrder order="2" />
+              </data>
+            </addData>
+          </pouInstance>
+          <addData>
+            <data name="http://www.mitsubishielectric.com/xml/resourceExecutionType" handleUnknown="implementation">
+              <resourceExecutionType type="scan" />
+            </data>
+            <data name="http://www.mitsubishielectric.com/xml/resourceProperties" handleUnknown="implementation">
+              <resourceProperties modificationDateTime="2026-06-25T03:20:25+07:00" />
+            </data>
+          </addData>
+        </resource>
+      </configuration>
+    </configurations>
+  </instances>
+  <addData>
+    <data name="http://www.mitsubishielectric.com/xml/projectPlcType" handleUnknown="implementation">
+      <projectPlcType name="FX5U" />
+    </data>
+  </addData>
+</project>
